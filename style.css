@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-size: 62.5%;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+body{
+    background: linear-gradient(to bottom,hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.main-container{
+    width: 90rem;
+    height: 51rem;
+    background-color: white;
+    display: flex;
+    border-radius: 1rem;
+    position: relative;
+   
+}
+
+.left-side{
+    width: 45.5rem;
+    position: relative;
+    
+    
+}
+
+.left-side {
+    overflow: hidden;
+}
+
+.left-side .box{
+    overflow: visible;
+}
+
+.left-side .bg{
+
+}
+
+.right-side{
+    width: 45.5rem;
+    margin-top: 7rem;
+}
+
+.det{
+   
+    border-bottom: 1px solid hsl(240, 6%, 50%);
+    margin:2rem 9rem 2rem 0;
+    padding-bottom: 1rem;
+}
+
+.det p{
+    padding: 1rem 0;
+}
+
+.det-det1{
+     margin-top: 4.5rem;
+}
+
+summary {
+    display: flex;
+    justify-content: space-between;
+    /* font-weight: bold; */
+    font-size: 1.6rem;
+}
+
+summary img{
+    width: 10px;
+    height: 7px;
+   
+}
+
+summary:hover{
+    color: lightcoral;
+    cursor: pointer;
+}
+
+details[open] > summary{
+    font-weight: bold;
+    
+}
+
+details[open] > summary img{
+    transform: rotate(180deg);
+}
+
+
+.box{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%,100%);
+    z-index: 2;
+}
+
+.box{
+    animation: 5s move infinite;
+}
+
+@keyframes move{
+
+    from{
+      
+        transform: translate(-50%,100%);
+  }
+  50%{
+      transform: translate(-50%,50%);
+  }
+  to{
+
+        transform: translate(-50%,100%);
+  }
+
+   
+}
+
+.woman{
+    position: absolute;
+    height: 65%;
+    top: 0;
+    left: 0;
+    transform: translate(-19%,26%);
+    z-index: 1;
+}
+
+.bg{
+    position: absolute;
+    z-index: 0;
+    top: -323px;
+    left: -621px;
+}
+
+
+.attribution{
+    margin-top: 4rem;
+    color: white;
+}
+
+.attribution a{
+    color: seashell;
+}
+
+@media screen and (max-width:1000px) {
+    
+    html{
+        /* font-size: 50%; */
+    }
+    .main-container{
+        width: 70rem;
+        height: 45rem; 
+    }
+
+    .left-side{
+        width:35rem ;
+
+    }
+
+    .right-side{
+        width: 35rem;
+     
+    }
+}
+
+@media screen and (max-width:800px) {
+    .main-container{
+         display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60rem;
+        height: 55rem;
+        
+    }
+
+    .main-container .box{
+        display: none;
+    }
+
+
+}
