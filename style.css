@@ -154,6 +154,10 @@ details[open] > summary img{
     color: seashell;
 }
 
+.bg-mobile{
+    display: none;
+}
+
 @media screen and (max-width:1000px) {
     
     html{
@@ -173,21 +177,154 @@ details[open] > summary img{
         width: 35rem;
      
     }
+
+    .det{
+   
+        border-bottom: 1px solid hsl(240, 6%, 50%);
+        margin:2rem 6rem 2rem 0;
+        padding-bottom: 1rem;
+    }
 }
 
 @media screen and (max-width:800px) {
     .main-container{
-         display: flex;
+        position: relative;
+        display: flex;
         flex-direction: column;
         align-items: center;
-        width: 60rem;
-        height: 55rem;
+        justify-content: center;
+        width: 40rem;
+        height: 60rem;
         
+    }
+
+    .left-side{
+        width: 40rem;
+        height: 20%;
+        overflow: visible;
+        position: static;
+    }
+
+    .right-side{
+        width: 40rem;
+        height: 80%;
+    }
+
+    .det{
+        width: 90%;
+        border-bottom: 1px solid hsl(240, 6%, 50%);
+        margin:0 0 2rem 0;
+        padding-bottom: 1rem;
+        align-self: center;
     }
 
     .main-container .box{
         display: none;
     }
 
+    .right-side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
+    }
+
+    summary{
+        width: 100%;
+        align-items: center;
+    }
+
+    .woman{
+        background-image: url('./images/illustration-woman-online-mobile.svg');
+        height: 33%;
+        top:0;
+        left:0;
+        transform: translate(27%, -60%);
+    }
+
+    .bg{
+        display: none;
+    }
+
+    .bg-mobile{
+        display: block;
+        position: absolute;
+        background-image: url('./images/bg-pattern-mobile.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 20%;
+        top: 0;
+        left: 0;
+        transform: translate(20%, 2%);
+    }
+
+}
+
+@media screen and (max-width: 450px ) {
+    html{
+        font-size: 50%;
+    }
+
+    .main-container{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 33rem;
+        height: 60rem;
+        
+    }
+
+    .left-side{
+        width: 33rem;
+        height: 20%;
+        overflow: visible;
+        position: static;
+    }
+
+    .right-side{
+        width: 33rem;
+        height: 80%;
+    }
+
+    .det{
+        width: 80%;
+        border-bottom: 1px solid hsl(240, 6%, 50%);
+        margin:0 0 1rem 0;
+        padding-bottom: 1rem;
+        align-self: center;
+    }
+
+
+    .right-side{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    summary{
+        width: 100%;
+        align-items: center;
+    }
+
+    .woman{
+        background-image: url('./images/illustration-woman-online-mobile.svg');
+        height: 33%;
+        top:0;
+        left:0;
+        transform: translate(15%, -60%);
+    }
+
+    .bg{
+        display: none;
+    }
+
+    .bg-mobile{
+        height: 30%;
+        transform: translate(6%, 0%);
+    }
 }
